@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+nav {
+  height: 10vh;
+  background: #5b78c7;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+
+.nav-links li a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .line:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    bottom: 8px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .line:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    top: 8px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .line span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    margin: 5px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    bottom: -7px;
+    right: -36px;
+  }
+  .active {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .active:before {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    top: 0;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .active:after {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .active span {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    opacity: 0;
+  }
+  nav {
+    position: relative;
+  }
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    -webkit-transform: translate(-5%, -50%);
+            transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+  .nav-links {
+    position: fixed;
+    background: #5b78c7;
+    height: 100vh;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li a {
+    font-size: 25px;
+  }
+  .nav-links li:nth-child(1) {
+    -webkit-transition: all 0.5s ease 0.2s;
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    -webkit-transition: all 0.5s ease 0.4s;
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    -webkit-transition: all 0.5s ease 0.6s;
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -20%);
+    pointer-events: all;
+  }
+  li.fade {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
